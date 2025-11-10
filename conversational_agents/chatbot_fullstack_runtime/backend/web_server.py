@@ -17,7 +17,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
 load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
@@ -105,8 +104,6 @@ def create_tables():
 
 
 # functions
-
-
 def parse_sse_line(line):
     line = line.decode("utf-8").strip()
     if line.startswith("data: "):

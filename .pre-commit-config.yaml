@@ -32,8 +32,6 @@ repos:
           | \.html$
           )
         args: [
-#          --disallow-untyped-defs,
-#          --disallow-incomplete-defs,
           --ignore-missing-imports,
           --disable-error-code=var-annotated,
           --disable-error-code=union-attr,
@@ -68,6 +66,7 @@ repos:
           | \.html$
           )
         args: [
+          "--init-hook=import sys; sys.path.insert(0, 'alias/src')",
           --disable=W0511,
           --disable=W0718,
           --disable=W0122,

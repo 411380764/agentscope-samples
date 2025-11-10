@@ -4,11 +4,11 @@ import uuid
 import random
 import string
 import time
-
 from base64 import b64encode
 from hashlib import sha256
 from hmac import new as hmac_new
 from typing import List, Dict, Any
+
 import requests
 from .utils import format_time
 
