@@ -5,6 +5,7 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: ${{ !(github.event_name == 'pull_request' && startsWith(github.event.pull_request.title, 'docs:')) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
